@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문성훈 이력서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f2240;
+    --navy-mid: #1b3a5c;
+    --navy-light: #2a5298;
+    --accent: #c8913a;
+    --accent-light: #e8b560;
+    --bg: #f7f5f0;
+    --bg-card: #ffffff;
+    --text: #1a1a2e;
+    --text-mid: #3d4b6b;
+    --text-light: #7a8aaa;
+    --border: #dde3ee;
+    --tag-bg: #eef2f8;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Layout */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    box-shadow: 0 4px 40px rgba(15,34,64,0.12);
+  }
+
+  /* Header */
+  .header {
+    background: var(--navy);
+    padding: 52px 56px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    border: 40px solid rgba(200,145,58,0.12);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40%;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 24px solid rgba(255,255,255,0.04);
+  }
+
+  .name-ko {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .name-en {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--accent-light);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+
+  .tagline {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    line-height: 1.6;
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    max-width: 520px;
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 40px;
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.65);
+    font-size: 12.5px;
+  }
+
+  .meta-item .label {
+    color: var(--accent-light);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 60px;
+  }
+
+  /* Main content */
+  .content {
+    padding: 0 56px 56px;
+  }
+
+  /* Section */
+  .section {
+    padding-top: 44px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--navy);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 18px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  /* Positioning */
+  .positioning-lead {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--navy-mid);
+    line-height: 1.8;
+    padding: 18px 22px;
+    background: var(--tag-bg);
+    border-left: 4px solid var(--navy-mid);
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 20px;
+  }
+
+  .pos-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pos-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.2s;
+  }
+
+  .pos-item:hover { border-color: var(--navy-light); }
+
+  .pos-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--tag-bg);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    min-width: fit-content;
+    height: fit-content;
+    margin-top: 1px;
+    letter-spacing: 0.3px;
+  }
+
+  .pos-text {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.65;
+  }
+
+  /* Highlights table */
+  .highlights-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(15,34,64,0.07);
+  }
+
+  .highlights-table thead tr {
+    background: var(--navy);
+  }
+
+  .highlights-table thead th {
+    padding: 12px 18px;
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+  .highlights-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  .highlights-table tbody tr:hover { background: #f8faff; }
+  .highlights-table tbody tr:last-child { border-bottom: none; }
+
+  .highlights-table td {
+    padding: 13px 18px;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .highlights-table td:first-child {
+    width: 200px;
+    font-weight: 600;
+    color: var(--navy-mid);
+    background: #f8faff;
+    border-right: 1px solid var(--border);
+  }
+
+  .highlights-table td:last-child {
+    color: var(--text-mid);
+  }
+
+  /* Experience */
+  .exp-block {
+    margin-bottom: 40px;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-company {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .exp-role {
+    font-size: 13px;
+    color: var(--text-mid);
+    margin-top: 3px;
+  }
+
+  .exp-period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-light);
+    text-align: right;
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+
+  .exp-summary {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.7;
+    margin: 12px 0 18px;
+    padding: 12px 16px;
+    background: var(--tag-bg);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* Sub-sections within experience */
+  .sub-section {
+    margin-bottom: 16px;
+  }
+
+  .sub-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    background: var(--navy-mid);
+    padding: 3px 12px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .bullet-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .bullet-list li {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.65;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+
+  .bullet-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 11px;
+    top: 6px;
+  }
+
+  .num-highlight {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--navy-mid);
+    background: #eef2f8;
+    padding: 0 4px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  /* Skills section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0;
+  }
+
+  .skill-row {
+    display: contents;
+  }
+
+  .skill-row > * {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .skill-row:last-child > * {
+    border-bottom: none;
+  }
+
+  .skill-key {
+    font-weight: 600;
+    color: var(--navy-mid);
+    background: var(--tag-bg);
+    border-right: 1px solid var(--border);
+  }
+
+  .skill-val {
+    color: var(--text-mid);
+  }
+
+  /* Print styles */
+  @media print {
+    @page {
+      size: A4;
+      margin: 18mm 15mm 18mm 15mm;
+    }
+
+    body { background: white; font-size: 12.5px; }
+    .page { box-shadow: none; max-width: 100%; margin: 0; }
+
+    /* 색상 강제 출력 */
+    .header, .highlights-table thead tr, .sub-label, .num-highlight {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* 헤더 인쇄 축소 */
+    .header { padding: 36px 40px 32px; }
+    .header::before, .header::after { display: none; }
+    .name-ko { font-size: 30px; }
+    .name-en { font-size: 13px; }
+    .tagline { font-size: 13px; }
+    .meta-item { font-size: 11.5px; }
+    .content { padding: 0 40px 40px; }
+
+    /* 섹션 타이틀은 항상 다음 내용과 함께 */
+    .section-title {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* 섹션 시작은 페이지 상단 허용 */
+    .section {
+      page-break-before: auto;
+      break-before: auto;
+    }
+
+    /* 경력 블록: sub-section 사이에서는 잘릴 수 있되, sub-section 내부는 보호 */
+    .exp-block {
+      page-break-before: auto;
+    }
+
+    /* sub-section이 너무 길면 허용하되, 최소 3줄은 함께 */
+    .sub-section {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* 하이라이트 테이블 분리 방지 */
+    .highlights-table {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* 포지셔닝 카드 분리 방지 */
+    .pos-item {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* 학력/기술 그리드 분리 방지 */
+    .skills-grid {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* 불릿 항목 orphan 방지 */
+    .bullet-list li {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* 경력 헤더는 반드시 다음 내용과 같은 페이지 */
+    .exp-header {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    .exp-summary {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* 링크 URL 표시 제거 */
+    a::after { content: none !important; }
+  }
+
+  @media (max-width: 720px) {
+    .header { padding: 36px 28px 32px; }
+    .content { padding: 0 28px 40px; }
+    .meta-grid { grid-template-columns: 1fr; }
+    .highlights-table td:first-child { width: 140px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="name-ko">문성훈</div>
+    <div class="name-en">Moon Sung Hoon</div>
+    <div class="tagline">전사 전략 수립부터 실행 체계 구축까지 — 사업전략·경영기획·성과관리 19년, end-to-end 리더</div>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <span class="label">현직</span>
+        <span>㈜휴넷 / 교육사업본부 / 사업전략팀장</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">연락처</span>
+        <span>010-5094-8313 / renomsh@gmail.com</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">경력</span>
+        <span>19년 (사업전략)</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">입사가능</span>
+        <span>채용 확정 후 1개월</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- 핵심 포지셔닝 -->
+    <section class="section">
+      <h2 class="section-title">핵심 포지셔닝</h2>
+      <div class="positioning-lead">
+        전략을 KPI·운영체계·수익구조로 연결해 성과로 닫는 리더
+      </div>
+      <div class="pos-items">
+        <div class="pos-item">
+          <span class="pos-label">전사 전략기획 + 실행 체계</span>
+          <span class="pos-text">중장기 전략 수립, 연간 경영계획, KPI 운영, 추진과제 PMO를 일관된 체계로 설계하고, 전략 문서에서 멈추지 않고 조직 정렬·의사결정 구조까지 직접 가동</span>
+        </div>
+        <div class="pos-item">
+          <span class="pos-label">제안형 + 완주형</span>
+          <span class="pos-text">탐색과 실행이 분리되지 않는 구조. 새로운 문제를 먼저 발견하되 검증 없이 착수하지 않고, PM으로 끝까지 책임진 프로젝트 30건 이상</span>
+        </div>
+        <div class="pos-item">
+          <span class="pos-label">개발 6년 × 전략 19년</span>
+          <span class="pos-text">데이터·시스템·업무 구조를 함께 보는 능력으로 추상적 전략을 구체적 실행 구조로 직접 연결</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 대표 성과 -->
+    <section class="section">
+      <h2 class="section-title">대표 성과 하이라이트</h2>
+      <table class="highlights-table">
+        <thead>
+          <tr>
+            <th>주제</th>
+            <th>핵심 성과</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>전사 전략·경영기획 PMO</td>
+            <td>전사 추진과제 <span class="num-highlight">120건</span> 발굴·실행 관리 / KPI·매출 통합체계 설계 / 계열사 전략 협력 주도</td>
+          </tr>
+          <tr>
+            <td>사업모델 설계·사업화</td>
+            <td>스마트올클래스: 연매출 <span class="num-highlight">1,100억</span> 규모 성장, 공헌이익률 <span class="num-highlight">15%→50%</span>, 공헌이익 <span class="num-highlight">385억</span> 증가</td>
+          </tr>
+          <tr>
+            <td>수익·비용 구조 재설계</td>
+            <td>가격정책 재설계로 연환산 <span class="num-highlight">120억</span> 매출 효과 / 조직·비용 구조 개편으로 연 <span class="num-highlight">94억</span> 절감</td>
+          </tr>
+          <tr>
+            <td>신사업 확장 (BPO)</td>
+            <td>매출 <span class="num-highlight">20억→80억</span> / 2년간 4배 성장 / 전략 수립부터 조직개편까지 전담</td>
+          </tr>
+          <tr>
+            <td>AI 에이전트 구축</td>
+            <td>Python+OpenAI API 직접 개발 / 조사 시간 <span class="num-highlight">80%</span> 단축, 월 <span class="num-highlight">1,400건</span> 활용</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 경력사항 -->
+    <section class="section">
+      <h2 class="section-title">경력사항</h2>
+
+      <!-- 휴넷 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">㈜휴넷</div>
+            <div class="exp-role">교육사업본부 / 사업전략팀장</div>
+          </div>
+          <div class="exp-period">2022.08 ~ 현재</div>
+        </div>
+        <div class="exp-summary">
+          CEO 직속 전사 사업전략 PMO로서 연 800억 규모 HRD 사업의 기획·운영·성과관리, 신사업 수익화, 계열사 전략 협력·전사 혁신과제 관리를 주도.
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">전사 전략 · 경영기획 PMO</div>
+          <ul class="bullet-list">
+            <li>Project 30 운영: <span class="num-highlight">120건</span> 과제 발굴·실행 관리 체계 구축, CEO 월 2회 임원 회의 주관</li>
+            <li>연간 경영계획 수립 및 조직별 KPI 목표 설정·성과관리 체계 운영</li>
+            <li>매출통합관리체계 신규 설계: 전사 매출 데이터 정합성 확보 및 실시간 관리 구조 구축</li>
+            <li>HRD 컨설턴트 업무표준화로 생산성 <span class="num-highlight">30%</span> 향상</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">사업 성장 관리</div>
+          <ul class="bullet-list">
+            <li>HRD 사업 매출 안정적 성장 관리: <span class="num-highlight">786억</span>(2022) → <span class="num-highlight">802억</span>(2023) → <span class="num-highlight">819억</span>(2024)</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">계열사 전략 협력</div>
+          <ul class="bullet-list">
+            <li>이지런: 콘텐츠 개발 사업 관련 회사 대표 소통 창구, 수익 협의 및 협업 프로토콜 수립, 향후 양사 사업 방향 수립 주도</li>
+            <li>탤런트뱅크: CEO 겸임 체계 하 계열사 연계 운영, 이사/팀장급 3인 편입 조직 정렬, 수익모델·대상시장·신규상품·핵심지표 체계 전면 재정의 설계 중</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">신사업 기획 및 수익화</div>
+          <ul class="bullet-list">
+            <li>BPO 사업 전략 수립·조직개편 전담: 매출 <span class="num-highlight">20억→80억</span>, 2년간 4배 성장</li>
+            <li>휴넷 Flex 상품 기획·출시로 중소기업 시장 신규 개척: <span class="num-highlight">130개</span> 기업 가입</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">AI · 생산성</div>
+          <ul class="bullet-list">
+            <li>Python + OpenAI API + Slack Bot 기반 AI 에이전트 직접 구축: 월 <span class="num-highlight">1,400건</span> 활용, 조사 시간 <span class="num-highlight">80%</span> 단축</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 웅진 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">㈜웅진씽크빅</div>
+            <div class="exp-role">교육문화사업본부 / 차장(프로젝트 팀장)</div>
+          </div>
+          <div class="exp-period">2007.01 ~ 2022.08</div>
+        </div>
+        <div class="exp-summary">
+          기존 구조의 결함을 먼저 찾고, 실행 가능성을 검증한 뒤 PM으로 완주하는 사업혁신형 프로젝트 리더. 15년간 20건 이상의 신사업·혁신과제를 제안·런칭했으며, 제안만 하고 넘긴 과제 없음.
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">사업모델 설계 · 사업화</div>
+          <ul class="bullet-list">
+            <li>스마트올클래스 혁신 모델 직접 제안·런칭 PM: 연매출 <span class="num-highlight">1,100억</span> 규모 성장, 공헌이익률 <span class="num-highlight">15%→50%</span>, 공헌이익 <span class="num-highlight">385억</span> 증가</li>
+            <li>화상교육 신규 상품 초기 투입 및 피벗(화상수학→영어화상) PM: 월 <span class="num-highlight">3.5만</span> 과목(연매출 약 <span class="num-highlight">248억</span>)까지 확장, 이관 후에도 3만 수준 유지되는 구조로 안착</li>
+            <li>중등 프리미엄 프랜차이즈 학원 사업 PM: <span class="num-highlight">50개</span> 학원 오픈, 평균 1년 내 손익분기 달성</li>
+            <li>북클럽 초기 아이디어 제안 등 신규 플랫폼 모델 발굴 기여</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">수익구조 · 가격정책 · 비용구조 재설계</div>
+          <ul class="bullet-list">
+            <li>가격체계 혁신 PM: 100만 과목 대상 전사 가격정책 재설계, 5개월 매출 <span class="num-highlight">50억</span> 증대, 연환산 <span class="num-highlight">120억</span> 효과</li>
+            <li>교사 복리 지원 제도 재설계: 연매출 <span class="num-highlight">120억</span> 증대, 비용 <span class="num-highlight">34억</span> 절감, 교사 정착률 <span class="num-highlight">12%</span> 증가</li>
+            <li>행정스탭 군집화 기획: 연간 비용 <span class="num-highlight">60억</span> 절감</li>
+            <li>투자손익 Logic 개발: 방과후사업 영업이익률 <span class="num-highlight">7%p</span> 개선 (9%→16%)</li>
+          </ul>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-label">운영 · 마케팅 혁신</div>
+          <ul class="bullet-list">
+            <li>DB 마케팅 시스템 구축: 입회율 <span class="num-highlight">18%p</span> 향상 (3%→21%)</li>
+            <li>VOC 관리 체계 구축: 고객 불만 <span class="num-highlight">77%</span> 감소</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 개발자 -->
+      <div class="exp-block" style="margin-bottom: 20px;">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">백엔드 개발자</div>
+            <div class="exp-role">프리랜서 및 다수 프로젝트</div>
+          </div>
+          <div class="exp-period">2000.01 ~ 2006.12</div>
+        </div>
+        <div class="exp-summary">
+          사업전략 이전 6년간 백엔드 개발(Java, PHP, ASP, C++)과 DB 설계(Oracle, MySQL, MS-SQL)를 직접 수행. 현재 전략 업무에서 데이터 구조 해석, 시스템 설계 판단, AI 에이전트 직접 구축이 가능한 배경.
+        </div>
+      </div>
+    </section>
+
+    <!-- 학력 및 기술 -->
+    <section class="section" style="padding-top: 24px;">
+      <h2 class="section-title">학력 및 기술</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <div class="skill-key">학력</div>
+          <div class="skill-val">
+            성균관대학교 EMBA(경영대학원, 서울) 석사 / 2015.03~2017.02 / 학점 3.9/4.5<br>
+            단국대학교(서울) 학사 / 1997.03~2005.08 / 학점 3.7/4.5
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">교육·자격</div>
+          <div class="skill-val">
+            CMA 과정(AIFA) 국제공인관리회계 / 2008.03~2008.09<br>
+            Programming 과정(KH정보교육원) / 2000.06~2000.12
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">기술</div>
+          <div class="skill-val">
+            Python(중상), SQL(상), Java(중), JavaScript(중) / OpenAI API(상), Pandas(중)<br>
+            Oracle(상), MySQL(상), MS-SQL(중) / Slack Bot 개발(상), Confluence(상), SAP 데이터 추출·활용<br>
+            Excel 기반 ROI·현금흐름·의사결정 모델 설계
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">외국어</div>
+          <div class="skill-val">
+            영어: 말하기(중), 읽기·쓰기(중) / Washington D.C. 거주(1981~1985) / International School of Aspect 연수(2003)
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
